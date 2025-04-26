@@ -35,6 +35,11 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware('web')
+                ->prefix('admin') // thêm dòng này
+                ->as('admin.')    // nếu muốn gán tên route (ví dụ admin.dashboard)
+                ->group(base_path('routes/admin.php'));
         });
     }
 }
