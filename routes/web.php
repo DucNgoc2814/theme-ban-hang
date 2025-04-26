@@ -39,3 +39,12 @@ Route::get('/yeu-thich', function () {
 Route::get('/thong-tin', function () {
     return view('client.auth.profile');
 })->name('profile');
+Route::get('/dang-ky', function () {
+    return view('client.auth.register');
+})->name('register');
+Route::get('/dang-nhap', function () {
+    return view('client.auth.login');
+})->name('login');
+Route::get('/quen-mat-khau', function () {
+    return view('client.auth.forgot');
+})->name('forgot');
